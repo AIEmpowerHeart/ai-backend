@@ -1,0 +1,16 @@
+steps:
+  # Install dependencies
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+
+  # Optional: Run tests (comment out if not needed)
+  # - name: 'gcr.io/cloud-builders/npm'
+  #   args: ['test']
+
+  # Start the app
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'start']
+    dir: '.'
+
+# Optional: increase timeout for slow builds
+timeout: '900s'
